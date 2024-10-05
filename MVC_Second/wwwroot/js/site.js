@@ -1,4 +1,18 @@
-﻿// Please see documentation at https://learn.microsoft.com/aspnet/core/client-side/bundling-and-minification
-// for details on configuring this project to bundle and minify static web assets.
+﻿document.addEventListener("DOMContentLoaded", function () {
 
-// Write your JavaScript code.
+    const devElement = document.querySelector(".dev");
+    if (devElement) {
+        devElement.textContent = "Hello from JavaScript!";
+    }
+
+    const button = document.createElement("button");
+    button.textContent = "Click Me!";
+    button.style.marginTop = "20px";
+    document.body.appendChild(button);
+
+    button.addEventListener("click", function () {
+        alert("Button clicked!");
+    });
+
+    console.log("Script successfully loaded and executed.");
+});
